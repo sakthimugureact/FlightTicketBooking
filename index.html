@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flight Ticket Booking</title>
+    <link rel="stylesheet" href="./assets/css/index.css" />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/logo.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=travel"
+    />
+  </head>
+  <body id="google_translate_element">
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <img src="./assets/images/logo.png" alt="Logo" />
+        </div>
+        <div class="nav-buttons">
+          <a href="./pages/signin.html">SIGNIN</a>
+          <a href="./pages/signup.html">SIGNUP</a>
+          <button class="country">
+            <img src="./assets/images/indflag.png" alt="" />INR
+          </button>
+          <select>
+            <option value="eng">ENG</option>
+          </select>
+        </div>
+        <div class="hamburger">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="banner">
+        <img src="./assets/images/banner.png" alt="flight" />
+      </div>
+
+      <div class="flight">
+        <img src="./assets/images/flight-Photoroom.png" class="flighticon" alt="">
+        <h1 class="flight-title">Flights</h1>
+      </div>
+
+      <div class="ticket-method">
+        <form action=""  class="select-trip">
+            <div class="radiobtn">
+           <label for="" ><input type="radio" name="trip" checked="checked" value="oneway">One Trip</label> 
+           <label for=""><input type="radio" name="trip" value="twoway" >Round Trip</label>
+           <label for=""><input type="radio" name="trip" value="multiway" >Multi City</label><br>
+            </div>
+            </form>
+            <div id="fromTO">
+                  <form action="./pages/booking.html" id="getfrom" method="get">
+                      <input type="text" name="from" id="tripFrom" placeholder="From" autocomplete="list" >
+                      <li class="listcity"></li>
+                      <button class="exchangebtn"><img src="./assets/images/exchange.png" alt="exchange" width="30px"></button>
+                      <input type="text" name="from" id="tripTo" placeholder="To" >
+                      <li class="listTocity"></li>
+                      <input type="date" name="from" id="departDate" placeholder="dd-mm-yyyy"><br><br>
+                      <label for="" id="direct"><input type="checkbox" name="direct" id="directFlight">Direct Flight Only</label>
+                      <select name="class" id="selectClass">
+                        <option value="Economy">Economy</option>
+                        <option value="Premium Economy">Premium Economy</option>
+                        <option value="Business Class">Business Class</option>
+                        <option value="First Class">First Class</option>
+                      </select> 
+                     <button type="submit" id="onesubmitBtn">Search</button>       
+                 </form>
+            </div>
+
+            <div id="twoway">
+              <div class="two">
+                  <form action="">
+                      <input type="text" name="from" id="twotripFrom" placeholder="From">
+                      <button class="exchangebtn"><img src="./assets/images/exchange.png" alt="exchange" width="30px"></button>
+                      <input type="text" name="from" id="tripTo" placeholder="To">
+                      <input type="date" name="from" id="twowayDepart" placeholder="Depart"><input type="date" name="from" id="twowayReturn" placeholder="Return"><br>
+                      <label for="" id="direct"><input type="checkbox" name="direct" id="directFlight">Direct Flight Only</label>
+                      <select name="class" id="twoselectClass">
+                        <option value="class" disabled selected >Class</option>
+                        <option value="Economy">Economy</option>
+                        <option value="Premium Economy">Premium Economy</option>
+                        <option value="Business Class">Business Class</option>
+                        <option value="First Class">First Class</option>
+                      </select> 
+                      <button type="submit" id="twosubmitBtn">Search</button>             
+                 </form>
+              </div>
+            </div>
+
+            <div id="multiway">
+              <form action="">
+              <div id="flight-container">
+                <div class="flight-row">
+                  <input type="text" placeholder="From" id="tripFrom">
+                  <button class="exchangebtn"><img src="./assets/images/exchange.png" alt="exchange" width="30px"></button>
+                  <input type="text" placeholder="To" id="tripTo">
+                  <input type="date" placeholder="Depart">
+                  <button class="remove-button">✕</button>
+                </div>
+              </div>
+              
+              <div class="flight-options">
+                <button  class="addform">Add</button>
+                <label for="" id="direct"><input type="checkbox" name="direct" id="directFlight">Direct Flight Only</label>
+                <select name="class" id="multiselectClass">
+                  <option value="class" disabled selected >Class</option>
+                  <option value="Economy">Economy</option>
+                  <option value="Premium Economy">Premium Economy</option>
+                  <option value="Business Class">Business Class</option>
+                  <option value="First Class">First Class</option>
+                </select> 
+                <button type="submit" id="multisubmitBtn">Search</button> 
+              </div>
+            </form>
+            </div>
+      </div>
+
+      <article class="articleTwo">
+        <div class="customerspt">
+          <div class="atwoicons">
+            <img src="./assets/images/customer.png" alt="">
+          </div>
+          <div class="atwocontent">
+            <h1>CUSTOMER SUPPORT</h1>
+            <h5>24/7 Customer Support</h5>
+          </div>
+        </div>
+        <div class="customerspt">
+          <div class="atwoicons">
+            <img src="./assets/images/goldmesal.png" alt="">
+          </div>
+          <div class="atwocontent">
+            <h1>AIR POINTS REWARDS</h1>
+            <h5>Loyalty Reward Program</h5>
+          </div>
+        </div>
+        <div class="customerspt">
+          <div class="atwoicons">
+            <img src="./assets/images/downpayment.png" alt="">
+          </div>
+          <div class="atwocontent">
+            <h1>SECURED PAYMENTS</h1>
+            <h5>Visa, Mastercard, Gpay etc</h5>
+          </div>
+        </div>
+        <div class="customerspt">
+          <div class="atwoicons">
+            <img src="./assets/images/booking.png" alt="">
+          </div>
+          <div class="atwocontent">
+            <h1>INSTANT BOOKING</h1>
+            <h5>Book ticket with simple steps</h5>
+          </div>
+        </div>
+        <div class="customerspt">
+          <div class="atwoicons">
+            <img src="./assets/images/transport.png" alt="">
+          </div>
+          <div class="atwocontent">
+            <h1>ZERO CANCELLATION</h1>
+            <h5>100% Refund for Flight cancellation</h5>
+          </div>
+        </div>
+      </article>
+
+      <article class="articleThree">
+        <h1 class="planning">PLANNING A BUSINESS TRIP ?</h1>
+        <div class="business-travel-container">
+          <div class="business-left-content">
+            <h2>Your one-stop solution for booking business travel quickly, simply and efficiently</h2>
+            <a href="./pages/getstarted.html"><button class="business-button">Get Started</button></a>
+          </div>
+          <div class="business-man">
+            <img src="./assets/images/businessman.avif" alt="">
+          </div>
+        </div>
+      </article>
+
+      <article class="articleFour">
+        <h1 class="afourhead">POPULAR DESTINATION</h1>
+        <div class="tourPackage">
+          <div class="packages"><img src="./assets/images/Dubai.jpeg" alt="">
+          <div class="roundtripEco"><p>Round Trip - Economy</p></div>
+          <div class="roundtripPlace">DUBAI</div>
+          <div class="roundtripPrice"><p>From</p><p>Rs : 25000</p></div>
+          </div>
+          
+          <div class="packages"><img src="./assets/images/Delhi.jpeg" alt="">
+          <div class="roundtripEco"><p>Round Trip - Economy</p></div>
+          <div class="roundtripPlace">DELHI</div>
+          <div class="roundtripPrice"><p>From</p><p>Rs : 25000</p></div>
+          </div>
+        
+          <div class="packages"><img src="./assets/images/Singapore.jpeg" alt="">
+            <div class="roundtripEco"><p>Round Trip - Economy</p></div>
+            <div class="roundtripPlace">SINGAPORE</div>
+            <div class="roundtripPrice"><p>From</p><p>Rs : 25000</p></div>
+          </div>
+          
+          <div class="packages"><img src="./assets/images/Kashmir.jpeg" alt="">
+            <div class="roundtripEco"><p>Round Trip - Economy</p></div>
+            <div class="roundtripPlace">KASHMIR</div>
+            <div class="roundtripPrice"><p>From</p><p>Rs : 25000</p></div>
+          </div>
+        </div>
+        <button class="package-button">Check Our Packages</button>
+      </article>
+
+      <article class="articleFive">
+        <div class="ourservice">
+          <h1>OUR SERVICES</h1>
+          <div class="servicesCart">
+            <div class="servicesCartitems">
+              <div class="serviceImg">
+                <img src="./assets/images/service1.jpeg" alt="">
+                <h3>HOLIDAYS</h3>
+              </div>
+            </div>
+            <div class="servicesCartitems">
+              <div class="serviceImg">
+                <img src="./assets/images/service2.jpeg" alt="">
+                <h3>VISA SERVICES</h3>
+              </div>
+            </div>
+            <div class="servicesCartitems">
+              <div class="serviceImg">
+                <img src="./assets/images/service3.jpeg" alt="">
+                <h3>TRAVEL INSURANCE</h3>
+              </div>
+            </div>
+            <div class="servicesCartitems">
+              <div class="serviceImg">
+                <img src="./assets/images/service4.jpeg" alt="">
+                <h3>BUSNIESS TRIP</h3>
+              </div>
+            </div>
+            <div class="servicesCartitems">
+              <div class="serviceImg">
+                <img src="./assets/images/service6.jpeg" alt="">
+                <h3>EDUCATIONAL TRIP</h3>
+              </div>
+            </div>
+            <div class="servicesCartitems">
+              <div class="serviceImg">
+                <img src="./assets/images/service5.jpeg" alt="">
+                <h3>TRANSIT HOTEL</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="articleSix">
+        <div class="blackbg"></div>
+        <img src="./assets/images/greatwall.jpg" alt="">
+        <div class="articleSixContent">
+          <h5>Discover your next great adventure</h5>
+          <h1>BECOME AN EXPLORER</h1>
+          <h5>to get started!</h5>
+        </div>
+      </article>
+
+      <article class="articleSeven">
+        <h1>TOP DEALS!</h1>
+        <div class="tourPackage">
+          <div class="packages"><img src="./assets/images/Dubai.jpeg" alt="">
+          <div class="dealsEco"><p>Round Trip - Economy</p></div>
+          <div class="dealsAccomodation"><p>Accomdation <br>& Food</p></div>
+          <div class="dealsdays">4Days <br>&3nights</div>
+          <div class="dealsPlace">DUBAI</div>
+          <div class="dealsPrice"><p>From</p><p>Rs : 25000 <strike>20000</strike></p></div>
+          </div>
+          
+          <div class="packages"><img src="./assets/images/Delhi.jpeg" alt="">
+          <div class="dealsEco"><p>Round Trip - Economy</p></div>
+          <div class="dealsAccomodation"><p>Accomdation  <br>& Food</p></div>
+          <div class="dealsdays">4Days <br>&3nights</div>
+          <div class="dealsPlace">DELHI</div>
+          <div class="dealsPrice"><p>From</p><p>Rs : 25000 <strike>20000</strike></p></div>
+          </div>
+        
+          <div class="packages"><img src="./assets/images/Singapore.jpeg" alt="">
+            <div class="dealsEco"><p>Round Trip - Economy</p></div>
+            <div class="dealsAccomodation"><p>Accomdation  <br>& Food</p></div>
+            <div class="dealsdays">4Days <br>&3nights</div>
+            <div class="dealsPlace">SINGAPORE</div>
+            <div class="dealsPrice"><p>From</p><p>Rs : 25000 <strike>20000</strike></p></div>
+          </div>
+          
+          <div class="packages"><img src="./assets/images/Kashmir.jpeg" alt="">
+            <div class="dealsEco"><p>Round Trip - Economy</p></div>
+            <div class="dealsAccomodation"><p>Accomdation  <br>& Food</p></div>
+            <div class="dealsdays">4Days <br>&3nights</div>
+            <div class="dealsPlace">KASHMIR</div>
+            <div class="dealsPrice"><p>From</p><p>Rs : 25000 <strike>20000</strike></p></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="articleEight">
+        <h1>STORIES</h1>
+        <p>Your Next Adventure Starts Here!" - <br> Discover new places, cultures, and <br>experiences with us</p>
+        <div class="stories-cart">
+          <div class="stories-list">
+            <div class="stories-img">
+              <img src="./assets/images/Kashmir.jpeg" alt="">
+            </div>
+            <div class="stories-content">
+              <p>Kashmir,the "Paradise on Earth,"is famed for its stunning landscapes and rich culture</p>
+              <button>Read more</button>
+              <h6><i>Travel Blog</i></h6>
+            </div>
+          </div>
+          <div class="stories-list">
+            <div class="stories-img">
+              <img src="./assets/images/stories-2.jpeg" alt="">
+            </div>
+            <div class="stories-content">
+              <p>Kanyakumari, India's southern tip, is famous for its sunrise,sunset,and sea confluence.</p>
+              <button>Read more</button>
+              <h6><i>Travel Blog</i></h6>
+            </div>
+          </div>
+          <div class="stories-list">
+            <div class="stories-img">
+              <img src="./assets/images/stories-3.jpeg" alt="">
+            </div>
+            <div class="stories-content">
+              <p>Hyderabad, the "City of Pearls," blends history, IT hubs, and biryani,vibrant nightlife, and colonial architecture.</p>
+              <button>Read more</button>
+              <h6><i>Travel Blog</i></h6>
+            </div>
+          </div>
+          <div class="stories-list">
+            <div class="stories-img">
+              <img src="./assets/images/stories-4.jpeg" alt="">
+            </div>
+            <div class="stories-content">
+              <p>Goa is famous for its beautiful beaches, vibrant nightlife, and colonial architecture.</p>
+              <button>Read more</button>
+              <h6><i>Travel Blog</i></h6>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="articleNine">
+        <div class="acNine">
+        <h1>BOOK CHEAP FLIGHTS ON YOUR <br> FAVOURITE AIRLINES </h1>
+        <div class="airline-companys">
+          <img src="./assets/images/air arabia.png" alt="">
+          <img src="./assets/images/emirates.png" alt="">
+          <img src="./assets/images/dubai.png" alt="">
+          <img src="./assets/images/air india.png" alt="">
+          <img src="./assets/images/indigo.png" alt="">
+          <img src="./assets/images/spice.png" alt="">
+        </div>
+      </div>
+      </article>
+    </main>
+    <footer>
+        <div class="download-app">
+          <div class="left-img">
+            <img src="./assets/images/flightbook.png" alt="">
+          </div>
+          <div class="right-content">
+            <h1>Download our app</h1>
+            <h3>for a better experience!</h3>
+            <h2>Unlock Exclusive features!</h2>
+            <div class="download-btn">
+              <button>
+                <div class="btn-logos">
+                <img src="./assets/images/apple.png" alt="">Download on the <br> App Store
+              </div>
+              </button>
+              
+              <button>
+                <div class="btn-logos">
+                  <img src="./assets/images/google-play_888857.png" alt="">Get it on <br> Google Play
+              </div>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="contactus">
+          <div class="contact-first">
+              <img src="./assets/images/logo.png" alt="">
+              <div class="first-content">
+                  <h1 class="tours">Tours <br>Travels</h1>
+                  <h1 class="ampersand">&</h1>
+              </div>
+          </div>
+          <div class="contact-second">
+            <h6>Contact Us</h6>
+            <ul>
+              <li>Tours and Travels</li>
+              <li>Tower Building</li>
+              <li>Tamil Nadu</li>
+              <li>India</li>
+            </ul>
+
+            <ul>
+              <li>+91 7639000740</li>
+              <li>+91 7639027885</li>
+            </ul>
+
+            <ul>
+              <li>info@toursandtravels.com</li>
+            </ul>
+          </div>
+          <div class="contact-third">
+            <h6>Useful Links</h6>
+            <ul>
+              <li>Privacy Policy</li>
+              <li>User Agreement</li>
+              <li>Refund Policy</li>
+              <li>Terms and Conditions</li>
+            </ul>
+          </div>
+          <div class="contact-four">
+            <h6>Follow Us</h6>
+            <ul>
+              <a href=""><li><img src="./assets/images/facebook.png" alt=""></li></a>
+              <a href=""><li><img src="./assets/images/twitter.png" alt=""></li></a>
+              <a href=""><li><img src="./assets/images/youtube.png" alt=""></li></a>
+              <a href=""><li><img src="./assets/images/insta.png" alt=""></li></a>
+            </ul>
+          </div>
+        </div>
+    </footer>
+    <script src="./assets/js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded',()=>{
+            sortlist();
+            tosortlist();
+             Multiway();
+             JsonData();
+             getfrom();
+        })
+    </script>
+    <!-- <script>
+      function googleTranslateElementInit(){
+        new google.translate.TranslateElement(
+          {pageLanguage: "en"},
+          "google_translate_element"
+        )
+      }
+    </script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> -->
+  </body>
+</html>

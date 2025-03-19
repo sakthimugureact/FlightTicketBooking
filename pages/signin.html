@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flight Ticket Booking</title>
+    <link rel="stylesheet" href="../assets/css/signin.css" />
+    <link
+      rel="shortcut icon"
+      href="../assets/images/logo.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <img src="../assets/images/logo.png" alt="Logo" />
+        </div>
+        <div class="nav-buttons">
+          <a href="../pages/signin.html">SIGNIN</a>
+          <a href="../pages/signup.html">SIGNUP</a>
+          <button class="country">
+            <img src="../assets/images/indflag.png" alt="" />INR
+          </button>
+          <select>
+            <option value="eng">ENG</option>
+          </select>
+        </div>
+        <div class="hamburger">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="signup">
+        <div class="leftside">
+          <img src="../assets/images/logo.png" alt="" class="leftlogo" />
+          <div class="leftside-content">
+            <h1 class="tours">Tours Travels</h1>
+            <h1 class="ampersand">&</h1>
+          </div>
+          <div class="leftside-secondcontent">
+            <h1>"Your Perfect Trip, Planned to Perfection!"</h1>
+          </div>
+        </div>
+        <div class="center"></div>
+        <div class="rightside">
+          <h1 class="signtext">Sign In</h1>
+          <a href=""
+            ><button class="google-button">
+              <img src="../assets/images/google.png" alt="" class="google" />
+              Continue with Google
+            </button></a
+          >
+          <div class="or">
+            <p class="line">_____________</p>
+            <p>Or</p>
+            <p class="line">______________</p>
+          </div>
+          <h1 class="email">Email</h1>
+          <form action="">
+            <input type="email" name="name" id="gmail" placeholder="Email" />
+            <div class="password-icon">
+              <input
+                type="password"
+                name="name"
+                id="password"
+                placeholder="Password"
+              />
+              <img src="../assets/images/Hidden.png" alt="" id="show" />
+            </div>
+          </form>
+          <div class="agreement-container">
+            <input type="checkbox" id="agreementCheckbox" />
+            <label for="agreementCheckbox">Remember Me </label>
+          </div>
+          <button class="continue-btn">Continue</button>
+          <p class="sign-in-link">
+            Don't have an account ? <a href="./signup.html">Sign Up</a>
+          </p>
+        </div>
+      </div>
+    </main>
+    <script src="../assets/js/script.js"></script>
+    <script>
+     document.addEventListener('DOMContentLoaded',()=>{
+             signin();
+        })
+    </script>
+  </body>
+</html>

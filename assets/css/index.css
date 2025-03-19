@@ -1,0 +1,2337 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Cookie&family=Metal+Mania&family=Sriracha&family=Tektur:wght@400..900&family=Yusei+Magic&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.navbar {
+    position: fixed;
+    width: 100%;
+    background:white;
+    display: flex;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid black;
+    z-index: 99;
+}
+
+.logo img {
+    height: 55px;
+    margin-left: -10px;
+    margin-top: 5px;
+}
+
+.nav-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.nav-buttons a, .nav-buttons button {
+    background-color: #134DC0;
+    color: white;
+    padding: 5px 18px;
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+    margin-left: 40px;
+    margin-top: 0px;
+    cursor: pointer;
+}
+
+.nav-buttons button {
+    display: flex;
+    align-items: center;
+}
+
+.nav-buttons .country{
+    padding: 5.34px 15px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.nav-buttons img {
+    width: 18px;
+    height: 13px;
+    margin-right: 5px;
+}
+
+.nav-buttons select {
+    background-color: #134DC0;
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 10px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    margin-left: 1px;
+    cursor: pointer;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger .bar {
+    height: 3px;
+    width: 25px;
+    background-color: #333;
+    margin: 3px 0;
+    border-radius: 2px;
+}
+
+.banner{
+    width: 100%;
+    height: 500px;
+    position: relative;
+}
+
+.banner img{
+    width: 100%;
+    height: 100%;
+    margin-top: 50px;
+    filter: brightness(130%);
+}
+
+/* SignUP */
+.signup{
+    background-color: #134DC0;
+    width: 80%;
+    height: 300px;
+    margin: auto;
+    margin-top: 130px;
+}
+
+/* Ticket Method */
+.ticket-method{
+    width: 70%;
+    height: 300px;
+    
+}
+.flight{
+    width: 25%;
+    height: 100px;
+    display: flex;
+    border: 1px solid black;
+    justify-content: center;
+    align-items: center;
+    background-color: #211B91;
+    color: white;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    position: absolute;
+    top: 310px;
+    left: 60px;
+    gap:10px;
+}
+.flight:hover{
+    background-color: white;
+    color:black;
+}
+.flighticon{
+    width: 50px;
+    height: 60px;
+    margin-top: -15px;
+    margin-left: -30px;
+}
+.flight-title{
+    font-size: 75px;
+    font-family: "Cookie", cursive;
+    margin-top: -20px;
+    padding: 15px 15px 15px 0px;
+    letter-spacing: 5px;
+    font-weight: 400;}
+
+/* Trip Selection in Banner */
+.ticket-method{
+    width: 91%;
+    border: none;
+    height: 250px;
+    position: absolute;
+    top:395px;
+    left: 60px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px .5px;
+}
+.radiobtn{   
+    display: flex;
+    gap: 90px;
+}
+.radiobtn label{
+    font-size: 30px;
+    font-family: "Tektur", sans-serif;
+    margin-top: 10px;
+    margin-left: 20px;
+    padding: 5px 5px;
+    border-radius: 10px;
+}
+.radiobtn label:hover{
+    background-color: #9FEDA4;
+    cursor: pointer;
+}
+.radiobtn input[type="radio"]{
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+    border-radius: 50%;
+    outline: none;
+    background-color: white;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.radiobtn input[type="radio"]:checked {
+    background-color: #9FEDA4;
+    border: 5px solid black;
+    
+}
+
+
+/* one way */
+#fromTO{
+    margin-left: 30px;
+    margin-top: 20px;
+   display: block;
+}
+#tripFrom{
+    width: 32%;
+    height: 50px;
+    padding-left: 20px;
+    font-size: 25px;
+    border-radius: 8px;
+}
+#tripFrom::placeholder{
+    font-size: 25px;
+}
+#tripTo{
+    width: 32%;
+    height: 50px;
+    padding-left: 20px;
+    font-size: 25px;
+    border-radius: 8px;
+}
+#tripTo::placeholder{
+    font-size: 25px;
+}
+.exchangebtn{
+    width: 40px;
+    position: relative;
+    top: 10px;
+    border: none;
+    background-color: transparent;
+}
+#departDate{
+    appearance: none ;
+    width: 25%;
+    height: 50px;
+    margin-left: 30px;
+    position: relative;
+    top: -3px;
+    font-size: 20px;
+    border: 1px solid black;
+    outline: none;
+    border-radius: 8px;
+}
+
+#departDate::-webkit-calendar-picker-indicator{
+    font-size: 30px;
+}
+
+#direct{
+    font-size: 25px;
+    font-family: sans-serif;
+}
+#directFlight{
+    margin-top: 30px;
+    width: 30px;
+    height: 30px;
+    border:1px solid black;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+/* Select Class */
+
+  #selectClass{
+    width: 20%;
+    height: 50px;
+    font-size: 20px;
+    padding-left: 20px;
+  }
+  #selectClass option{
+    font-size: 30px;
+  }
+
+  #onesubmitBtn{
+        background-color: #4CAF50; 
+        border: none;
+        color: white;
+        padding: 12px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 25px;
+        border-radius: 8px;
+        font-weight: 700; 
+        cursor: pointer;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        margin-left: 30px;
+        margin-bottom: 30px;
+  }
+
+
+
+
+
+  /* TwoWay */
+#twoway{
+    margin-left: 30px;
+    margin-top: 20px;
+    display: none;
+}
+#twotripFrom{
+    width: 32%;
+    height: 50px;
+    padding-left: 20px;
+    font-size: 25px;
+    border-radius: 8px;
+}
+#twowayFrom::placeholder{
+    font-size: 25px;
+}
+#twowayTo{
+    width: 32%;
+    height: 50px;
+    padding-left: 20px;
+    font-size: 25px;
+    border-radius: 8px;
+}
+#twowayTo::placeholder{
+    font-size: 25px;
+}
+.exchangebtn{
+    width: 40px;
+    position: relative;
+    top: 10px;
+    border: none;
+    background-color: transparent;
+}
+#twowayDepart,#twowayReturn{
+    appearance: none ;
+    width: 10%;
+    height: 50px;
+    margin-left: 30px;
+    position: relative;
+    top: -3px;
+    font-size: 12px;
+    border: 1px solid black;
+    outline: none;
+    border-radius: 8px;
+}
+
+
+#twowayDepart::-webkit-calendar-picker-indicator{
+    font-size: 30px;
+}
+#twowayReturn::-webkit-calendar-picker-indicator{
+    font-size: 30px;
+}
+
+#direct{
+    font-size: 25px;
+    font-family: sans-serif;
+}
+#directFlight{
+    margin-top: 30px;
+    width: 30px;
+    height: 30px;
+    border:1px solid black;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+/* Select Class */
+ #twoselectClass{
+    width: 20%;
+    height: 50px;
+    font-size: 20px;
+    padding-left: 20px;
+  }
+  #selectClass option{
+    font-size: 30px;
+  }
+
+  #twosubmitBtn{
+        background-color: #4CAF50; 
+        border: none;
+        color: white;
+        padding: 12px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 25px;
+        border-radius: 8px;
+        font-weight: 700; 
+        cursor: pointer;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        margin-left: 30px;
+        margin-bottom: 30px;
+  }
+
+
+  /* Multiway */
+  #multiway{
+    display: none;
+    margin-top: 10px;
+  }
+  .flight-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .flight-row input[type="text"]{
+    width: 28%;
+    height: 50px;
+    margin-left: 25px;
+    font-size: 25px;
+    padding-left: 20px;
+  }
+
+  .flight-row input[type="date"] {
+    width: 15%;
+    height: 50px;
+    padding: 8px;
+    margin-right: 5px;
+    margin-left: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    
+  }
+  #multiway .exchangebtn{
+    margin-left: 20px;
+  }
+  
+  #multiselectClass{
+    width: 20%;
+    height: 50px;
+    font-size: 20px;
+    padding-left: 20px;
+    margin-top: 30px;
+  }
+  #selectClass option{
+    font-size: 30px;
+  }
+  .flight-row .remove-button {
+    background-color: red;
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+    font-size: 25px;
+  }
+  
+  #multiway #directFlight{
+    margin-left: 25px;
+  }
+  .flight-options {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .flight-options label {
+    margin-right: 10px;
+  }
+  
+  .flight-options select {
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  #multisubmitBtn{
+    background-color: #4CAF50; 
+    border: none;
+    color: white;
+    padding: 12px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 25px;
+    border-radius: 8px;
+    font-weight: 700; 
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    margin-left: 30px;
+    margin-top: 30px;
+
+}
+
+.listcity{
+    width: 32%;
+    border-radius: 3px;
+    position: absolute;
+    background-color: white;
+    font-size: 40px;
+    list-style: none;
+    padding-left: 20px;
+    margin-bottom: 30px;
+}
+.listTocity{
+    width: 32%;
+    border-radius: 3px;
+    position: absolute;
+    left: 38%;
+    background-color: white;
+    font-size: 40px;
+    list-style: none;
+    padding-left: 20px;
+    margin-bottom: 30px;
+}
+
+
+/* Article2 */
+.articleTwo{
+    margin-top: 180px;
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+}
+.customerspt{
+    display: flex;
+    border-radius: 10px;
+    min-width: 29%;
+    height: 100px;
+    text-align: center;
+    margin-left: 10px;
+    background-color: #F9FABC;
+    align-items: center;
+}
+.articleTwo::-webkit-scrollbar{
+    width: 0px;
+}
+.customerspt .atwoicons{
+    width: 30%;
+}
+.customerspt .atwoicons img{
+    width: 90px;
+}
+.customerspt .atwocontent{
+    width: 70%;
+    text-align: left;
+    font-family: sans-serif;
+}
+.customerspt .atwocontent h1{
+    color: #0D086F;
+    font-weight: 900;
+    font-size: 20px;
+}
+.customerspt .atwocontent h5{
+    font-weight: 500;
+    color: #333;
+    padding-top: 5px;
+    font-size: 16px;
+}
+
+
+/* articleThree */
+.articleThree .planning{
+    margin-top: 30px;
+    font-weight: 800;
+    font-size: 50px;
+    text-align: center;
+    color: #0D086F;
+    font-family: "Audiowide", sans-serif;
+}
+
+.business-travel-container {
+    display: flex;
+    width: 95%;
+    height: 500px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #6ef777;
+    text-align: center;
+    font-family: sans-serif;
+    align-items: center;
+    background-color: #f5fff6;
+    margin-top: 40px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.338);
+  }
+  .business-travel-container .business-left-content{
+    width: 50%;
+  }
+  .business-travel-container .business-left-content h2 {
+    font-size: 39px;
+    padding-right: 50px;
+    margin-bottom: 15px;
+    font-family: "Sriracha", cursive;
+  }
+
+  .business-travel-container .business-left-content button {
+    background-color: #6ef777;
+    margin-left: -90px;
+    margin-top: 40px;
+    color: #0D086F;
+    font-weight: 700;
+    font-size: 35px;
+    padding: 5px 50px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-family: "Sriracha", cursive;
+  }
+  .business-travel-container .business-man img{
+    width: 95%;
+    height: 100%;
+    border-radius: 5%;
+  }
+
+/* ArticleFour */
+.afourhead{
+    margin-top: 60px;
+    font-weight: 800;
+    font-size: 48px;
+    text-align: center;
+    color: #0D086F;
+    font-family: "Audiowide", sans-serif;
+    
+}
+
+.tourPackage{
+    margin-top: 60px;
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+}
+.tourPackage .packages{
+    min-width: 38%;
+    min-height: 350px;
+    position: relative;
+}
+.tourPackage>div>img{
+    width: 100%;
+    height: 100%;
+    margin-left: 25px;
+    border-radius: 20px;
+    filter: brightness(50%);
+}
+.tourPackage::-webkit-scrollbar{
+    width: 0px;
+}
+.tourPackage>.packages>.roundtripEco{
+    position: absolute;
+    top: 10px;
+    left: 40px;
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-family: sans-serif;
+}
+
+.tourPackage>.packages>.roundtripPlace{
+    position: absolute;
+    bottom: 10px;
+    left: 40px;
+    color: white;
+    font-weight: 900;
+    font-size: 30px;
+    padding: px 10px;
+    border-radius: 10px;
+    font-family: sans-serif;
+}
+.tourPackage>.packages>.roundtripPrice{
+    position: absolute;
+    bottom: 10px;
+    right: 1px;
+    color: white;
+    font-weight: 700;
+    font-size: 22px;
+    padding: px 10px;
+    border-radius: 10px;
+    font-family: sans-serif;
+}
+.package-button{
+    display: block;
+    margin: auto;
+    margin-top: 50px;
+    padding: 10px 60px;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    background-color: #6ef777;
+    color: #0D086F;
+    font-size: 35px;
+    font-weight: 700;
+    font-family: "Sriracha",cursive;
+}
+
+/* Article five */
+.articleFive{
+    width: 100%;
+    height: auto;
+    background-color: #F9FABC;
+    margin-top: 60px;
+}
+.articleFive .ourservice h1{
+    margin-top: 10px;
+    font-weight: 800;
+    font-size: 45px;
+    text-align: center;
+    color: #0D086F;
+    font-family: "Audiowide", sans-serif;
+}
+.articleFive h1{
+    padding-top: 30px;
+}
+.servicesCart{
+    display: flex;
+    width: 95%;
+    margin: auto;
+    margin-top: 30px;
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    align-items: center;
+}
+.servicesCart::-webkit-scrollbar{
+    width: 0px;
+}
+.servicesCartitems{
+    min-width: 30%;
+    height: 450px;
+    background-color: white;
+    border-radius: 2%;
+    margin-bottom: 30px;
+}
+.serviceImg img{
+    width: 100%;
+    height: 330px;
+    border-bottom-left-radius: 4%;
+    border-bottom-right-radius: 4%;
+}.servicesCartitems:nth-child(1) h3{
+    padding-top: 3  0px;
+}
+.servicesCartitems h3{
+    text-align: center;
+    font-family: "Tektur",sans-serif;
+    font-size: 45px;
+    font-weight: 700;
+}
+
+/* Article Six */
+.articleSix{
+    width: 100%;
+    height: 500px;
+    margin-top: 80px;
+    position: relative;
+}
+.articleSix .blackbg{
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 100%;
+    height: 500px;
+    position: absolute;
+}
+.articleSix img{
+    width: 100%;
+    height: 100%;
+}
+.articleSixContent{
+    width: 100%;
+    position: absolute;
+    bottom: 30px;
+    text-align: center;
+    font-family: sans-serif;
+}
+.articleSixContent h5{
+    font-size: 60px;
+    color:white;
+    font-weight: 500;
+    padding: 10px 0px;
+}
+.articleSixContent h1{
+    font-size: 90px;
+    color:#c62525;
+}
+
+/* Article Seven */
+.articleSeven h1{
+    text-align: center;
+    color: #0D086F;
+    margin-top: 60px;
+    font-weight: 800;
+    font-size: 50px;
+    font-family: "Audiowide", sans-serif;
+}
+.dealsEco{
+    position: absolute;
+    top: 10px;
+    left: 40px;
+    background-color: white;
+    padding: 5px 5px;
+    border-radius: 10px;
+    font-family: sans-serif;
+}
+.dealsPlace{
+    position: absolute;
+    bottom: 10px;
+    left: 40px;
+    color: white;
+    font-weight: 900;
+    font-size: 30px;
+    padding: px 10px;
+    border-radius: 10px;
+    font-family: sans-serif;
+}
+.dealsPrice{
+    position: absolute;
+    bottom: 10px;
+    right: 1px;
+    color: white;
+    font-weight: 700;
+    font-size: 22px;
+    padding: px 10px;
+    border-radius: 10px;
+    font-family: sans-serif;
+    text-align: right;
+}
+
+.dealsAccomodation{
+    position: absolute;
+    top: 10px;
+    right: 1px;
+    color: #c62525;
+    -webkit-text-stroke: thin white;
+    font-weight: 1000;
+    font-size: 25px;
+    padding: 0px 0px;
+    border-radius: 10px;
+    font-family: sans-serif;
+    text-align: right;
+    letter-spacing: -1px;
+}
+
+.dealsdays{
+    position: absolute;
+    top: 50px;
+    left: 40px;
+    color: #2ee54c;
+    -webkit-text-stroke: 1.8px white;
+    font-weight: 900;
+    font-size: 25px;
+    padding: 0px 0px;
+    border-radius: 10px;
+    font-family: sans-serif;
+    text-align: left;
+    letter-spacing: -1px;
+}
+
+/* Article Eight */
+
+.articleEight h1{
+    text-align: center;
+    height: 100px;
+    color: #0D086F;
+    margin-top: 60px;
+    font-weight: 700;
+    padding: 30px 0px;
+    font-size: 45px;
+    font-family: "Audiowide", sans-serif;
+    background-color: #F9FABC;
+}
+.articleEight p{
+    text-align: center;
+    color: #333;
+    font-family: sans-serif;
+    font-size: 45px;
+    letter-spacing: 1px;
+    padding-top: 50px;
+    font-weight: 550;
+}
+.stories-cart{
+    display: flex;
+    width: 95%;
+    margin: auto;
+    margin-top: 30px;
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+}
+.stories-cart::-webkit-scrollbar{
+    width: 0px;
+}
+.stories-list{
+    min-width: 40%;
+    height: 500px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 2.4%;
+    margin-bottom: 30px;
+    box-shadow: 1px 1px 1px 4px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+.stories-list img{
+    width: 100%;
+    height: 375px;
+    border-top-left-radius: 2%;
+    border-top-right-radius: 2%;
+}
+.stories-content{
+    position: absolute;
+    width: 100%;
+    height: 161px;
+    border-radius:20px 20px 11px 11px ;
+    border: 1px solid black;
+    bottom: 0;
+    background-color: white;
+}
+.stories-list p{
+    text-align: left;
+    font-size: 15px;
+    padding-top: 25px;
+    padding-left: 10px;
+    font-family: "Sriracha",cursive;
+    color: black;
+}
+.stories-list button{
+    background-color: #79c2f0;
+    margin: 20px 0 0 10px;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-size: 18px;
+}
+.stories-list button:hover{
+    background-color: #134DC0;
+}
+.stories-list h6{
+    font-size: 20px;
+    text-align: end;
+    margin-top: -25px;
+    padding-right: 10px;
+    font-family: "Sriracha",serif;
+    font-weight: 400;
+    color: #333;
+}
+
+/* Article Nine */
+.articleNine h1{
+    text-align: center;
+    color: #0D086F;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-family: "Audiowide", sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+}
+.airline-companys{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 40px;
+}
+.airline-companys img{
+    width: 15%;
+    height: 70px;
+}
+
+/* Article ten */
+.download-app{
+    width: 100%;
+    background-color: #f9d7ca;
+    height: 480px;
+    display: flex;
+}
+.download-app .left-img{
+    width: 40%;
+}
+.download-app img{
+    height: 450px;
+    width: 80%;
+    margin-left: 40px;
+}
+.download-app .right-content{
+    width: 60%;
+    text-align: center;
+    font-family: sans-serif;
+}
+.right-content h1{
+    font-size: 70px;
+    margin-top: 80px;
+    color: #0D086F;
+}
+.right-content h3{
+    font-size: 45px;
+    color: #333;
+    padding-top: 10px;
+}
+.right-content h2{
+    font-size: 50px;
+    padding-top: 20px;
+}
+.right-content button{
+    background: black;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+.download-btn{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+.right-content button{
+    width: 22%;
+    height: 60px;
+    text-align: center;
+    font-size: 13px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+.right-content button .btn-logos{
+    display: flex;
+    gap: 10px;
+}
+.right-content button img{
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+}
+.contactus{
+    width: 100%;
+    height: auto;
+    background: linear-gradient(90deg, rgba(27,91,217,1) 15%, rgba(255,255,255,1) 100%);
+    display: flex;
+}
+.contact-first{
+    width: 30%;
+}
+.first-content{
+    display: flex;
+    margin-top: -70px;
+}
+.tours{
+    width: 50%;
+    color: white;
+    text-align: right;
+    font-size: 45px;
+    padding-top: 6px;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+.ampersand{
+    width: 40%;
+    font-size: 100px;
+    padding-left: 5px;
+    padding-top: 3px;
+    padding-bottom: 20px;
+    font-weight: 600;
+    color: #6ef777;
+    font-family: sans-serif;
+}
+
+.contact-second{
+    width: 20%;
+    color: white;
+    font-family: sans-serif;
+    margin-top: 70px;
+}
+.contact-second h6{
+    font-size: 30px;
+}
+.contact-second ul{
+    list-style: none;
+    padding-top: 20px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.contact-third{
+    width: 20%;
+    color:white;
+    font-family: sans-serif;
+    margin-top: 70px;
+}
+.contact-third h6{
+    font-size: 30px;
+}
+.contact-third ul{
+    list-style: none;
+    padding-top: 20px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.contact-four{
+    width: 20%;
+    color:white;
+    font-family: sans-serif;
+    margin-top: 70px;
+    margin-left: 40px;
+}
+.contact-four h6{
+    font-size: 30px;
+}
+.contact-four ul{
+    list-style: none;
+    padding-top: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+.contact-four ul a li img{
+    width: 50px;
+}
+
+
+/* Add button */
+.addform{
+    width: 7%;
+    height: 30px;
+    margin-top: 17px;
+    background-color: #2ee54c;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 20px;
+    margin-top: 30px;
+
+}
+
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-buttons {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Adjust based on navbar height */
+        left: 0;
+        width: 100%;
+        background-color: white;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-buttons.active {
+        display: flex;
+    }
+
+    .nav-buttons a, .nav-buttons button, .nav-buttons select {
+        margin: 10px 20px;
+    }
+
+
+    .ticket-method{
+        width: 100%;
+        height: 300px;
+        
+    }
+    .flight{
+        width: 70%;
+        height: 100px;
+        display: flex;
+        border: 1px solid black;
+        justify-content: center;
+        align-items: center;
+        background-color: #211B91;
+        color: white;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        position: absolute;
+        top: 310px;
+        left: 0px;
+        gap:10px;
+    }
+    .flight:hover{
+        background-color: white;
+        color:black;
+    }
+    .flighticon{
+        width: 50px;
+        height: 60px;
+        margin-top: -15px;
+        margin-left: -30px;
+    }
+    .flight-title{
+        font-size: 30px;
+        font-family: "Montserrat", sans-serif;
+        margin-top: -20px;
+        padding: 15px 15px 15px 0px;
+    }
+    
+    /* Trip Selection in Banner */
+    .ticket-method{
+        width: 100%;
+        border: none;
+        height: auto;
+        position: absolute;
+        top:380px;
+        left: 0px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 1px 1px 1px .5px;
+    }
+    .radiobtn{   
+        display: flex;
+        gap: 0px;
+    }
+    .radiobtn label{
+        font-size: 12px;
+        font-family: "Montserrat", sans-serif;
+        margin-top: 10px;
+        margin-left: 2px;
+        padding: 5px 5px;
+        border-radius: 10px;
+    }
+    
+    
+    /* one way */
+    #fromTO{
+        margin-left: 5px;
+    }
+    #tripFrom{
+        width: 40%;
+        height: 30px;
+        font-size: 15px;
+    }
+    #tripFrom::placeholder{
+        font-size: 15px;
+    }
+    #tripTo{
+        width: 40%;
+        height: 30px;
+        font-size: 15px;
+    }
+    #tripTo::placeholder{
+        font-size: 15px;
+    }
+    .exchangebtn{
+        width: 40px;
+        position: relative;
+        top: 10px;
+        border: none;
+        background-color: transparent;
+    }
+    #departDate{
+        appearance: none ;
+        width: 50%;
+        height: 30px;
+        margin:20px 0 0 0;
+        position: relative;
+    }
+    #fromTO  #direct{
+        font-size: 15px;
+        font-family: sans-serif;
+        position: relative;
+        top:-30px;
+    }
+    #fromTO #directFlight{
+        width: 15px;
+        height: 15px;
+        margin-right: 5px;
+    }
+    
+    /* Select Class */
+    
+      #selectClass{
+        width: 43%;
+        height: 30px;
+        font-size: 20px;
+        padding-left: 10px;
+        position: relative;
+        top:-30px;
+        margin-left: 20px;
+      }
+      #selectClass option{
+        font-size: 15px;
+      }
+      #onesubmitBtn{
+            padding: 5px 80px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 25px;
+            margin: 0px 0px 20px 30px;
+      }    
+    
+      /* TwoWay */
+    #twoway{
+        margin-left: 10px;
+        display: none;
+    }
+    #twotripFrom{
+        width: 38%;
+        height: 30px;
+        padding-left: 10px;
+        font-size: 15px;
+        border-radius: 8px;
+    }
+    #twowayFrom::placeholder{
+        font-size: 15px;
+    }
+    #twowayTo{
+        width: 32%;
+        height: 50px;
+        padding-left: 20px;
+        font-size: 25px;
+        border-radius: 8px;
+    }
+    #twowayTo::placeholder{
+        font-size: 25px;
+    }
+    .exchangebtn{
+        width: 40px;
+        position: relative;
+        top: 10px;
+        border: none;
+        background-color: transparent;
+    }
+    #twowayDepart,#twowayReturn{
+        appearance: none ;
+        width: 39%;
+        height: 40px;
+        margin-left: 15px;
+        margin-top: 15px;
+    }
+    
+    #twowayDepart::-webkit-calendar-picker-indicator{
+        font-size: 30px;
+    }
+    #twowayReturn::-webkit-calendar-picker-indicator{
+        font-size: 30px;
+    }
+    #direct{
+        font-size: 15px;
+        font-family: sans-serif;
+    }
+    #directFlight{
+        margin-top: 30px;
+        width: 10px;
+        height: 10px;
+        margin-right: 10px;
+    }
+    
+    /* Select Class */
+     #twoselectClass{
+        width: 50%;
+        height: 40px;
+        font-size: 20px;
+        padding-left: 10px;
+      }
+      #selectClass option{
+        font-size: 30px;
+      }
+    
+      #twosubmitBtn{
+            padding: 12px 90px;
+            display: inline-block;
+            font-size: 25px;
+            border-radius: 8px;
+            font-weight: 700; 
+            cursor: pointer;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            margin: 10px 0;
+            margin-left: 20px;
+      }
+    
+      /* Multiway */
+      #multiway{
+        display: none;
+        margin-top: 10px;
+      }
+
+      .flight-row {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+      
+      .flight-row input[type="text"]{
+        width: 50%;
+        height: 50px;
+        margin-left: 10px;
+        font-size: 25px;
+        padding-left: 0px;
+      }
+    
+      .flight-row input[type="date"] {
+        width: 10%;
+        height: 50px;
+        padding: 8px;
+        margin-right: 5px;
+        margin-left: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        
+      }
+      #multiway .exchangebtn{
+        margin-left: 10px;
+        margin-top: -15px;
+      }
+      
+      #multiselectClass{
+        width: 80%;
+        height: 50px;
+      }
+      #selectClass option{
+        font-size: 30px;
+      }
+      
+      #multiway #directFlight{
+        margin-left: 10px;
+        margin-top: -10px;
+      }
+      .flight-options {
+        display: flex;
+        flex-direction: column;
+      }  
+      #multisubmitBtn{
+        padding: 12px 60px;
+        margin: 30px 0px;
+    }
+    
+    .listcity{
+        width: 40%;
+        border-radius: 3px;
+        position: absolute;
+        z-index: 1;
+        font-size: 15px;
+        list-style: none;
+        padding-left: 0px;
+        margin-bottom: 30px;
+    }
+    .listTocity{
+        width: 40%;
+        border-radius: 3px;
+        position: absolute;
+        left: 58%;
+        background-color: white;
+        z-index: 1;
+        font-size: 15px;
+        list-style: none;
+        padding-left: 0px;
+        margin-bottom: 30px;
+    }
+    
+    
+    /* Article2 */
+    .articleTwo{
+        margin-top: 200px;
+        display: flex;
+        gap: 30px;
+        overflow-x: auto;
+    }
+    .customerspt{
+        display: flex;
+        border-radius: 10px;
+        min-width: 70%;
+        height: 100px;
+        text-align: center;
+        margin-left: 10px;
+        background-color: #F9FABC;
+        align-items: center;
+    }
+    .articleTwo::-webkit-scrollbar{
+        width: 0px;
+    }
+    .customerspt .atwoicons{
+        width: 30%;
+    }
+    .customerspt .atwoicons img{
+        width: 50px;
+    }
+    .customerspt .atwocontent{
+        width: 70%;
+        text-align: left;
+        font-family: sans-serif;
+    }
+    .customerspt .atwocontent h1{
+        color: #0D086F;
+        font-weight: 900;
+        font-size: 13px;
+    }
+    .customerspt .atwocontent h5{
+        font-weight: 500;
+        color: #333;
+        padding-top: 5px;
+        font-size: 10px;
+    }
+    
+    
+    /* articleThree */
+    .articleThree .planning{
+        font-size: 30px;
+    }
+    
+    .business-travel-container {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 95%;
+        height: 500px;
+      }
+      .business-travel-container .business-left-content{
+        width: 100%;
+      }
+      .business-travel-container .business-left-content h2 {
+        font-size: 26px;
+        padding-right: 0px;
+        margin-bottom: 15px;
+        margin-top: 20px;
+      }
+    
+      .business-travel-container .business-left-content button {
+        background-color: #6ef777;
+        margin-left: 0px;
+        margin-top: 0px;
+        font-size: 35px;
+        padding: 10px 10px;
+      }
+      .business-travel-container .business-man img{
+        width: 95%;
+        height: 100%;
+        border-radius: 5%;
+      }
+
+      /* ArticleFour */
+      .afourhead{
+        font-size: 28px;
+    }
+    .tourPackage{
+        margin-top: 60px;
+        display: flex;
+        gap: 30px;
+        overflow-x: auto;
+    }
+    .tourPackage .packages{
+        min-width: 80%;
+        min-height: 300px;
+    }
+
+    .tourPackage>.packages>.roundtripEco{
+        padding: 5px 5px;
+        font-size: 12px;
+    }
+    
+    .tourPackage>.packages>.roundtripPlace{
+        position: absolute;
+        bottom: 15px;
+        left: 25px;
+        color: white;
+        font-weight: 900;
+        font-size: 20px;
+        padding: 0px 10px;
+        border-radius: 10px;
+        font-family: sans-serif;
+    }
+    .tourPackage>.packages>.roundtripPrice{
+        position: absolute;
+        bottom: 15px;
+        right: -10px;
+        color: white;
+        font-weight: 700;
+        font-size: 12px;
+        padding: 0px 10px;
+        border-radius: 10px;
+        font-family: sans-serif;
+    }
+
+    .package-button{
+        display: block;
+        margin: auto;
+        margin-top: 30px;
+        padding: 10px 10px;
+        outline: none;
+        border: none;
+        border-radius: 20px;
+        background-color: #6ef777;
+        color: #0D086F;
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    /* Article Five */
+
+    .servicesCartitems{
+        min-width: 100%;
+        height: 500px;
+        background-color: white;
+        border-radius: 2%;
+        margin-bottom: 30px;
+    }
+    .serviceImg img{
+        width: 100%;
+    }
+    .servicesCartitems h3{
+        text-align: center;
+        font-family: sans-serif;
+        padding-top: 35px;
+        font-size: 40px;
+    }
+    .articleFive .ourservice h1{
+        margin-top: 10px;
+        font-weight: 800;
+        font-size: 30px;
+        text-align: center;
+        color: #0D086F;
+        font-family: sans-serif;
+    }
+     
+    /* Article Six */
+
+    .articleSixContent h5{
+        font-size: 30px;
+        color:white;
+        font-weight: 500;
+        padding: 10px 0px;
+    }
+    .articleSixContent h1{
+        font-size: 20px;
+        font-weight: 900;
+        color:#c62525;
+    }
+
+    /* Article Seven */
+
+    .dealsEco{
+        position: absolute;
+        top: 10px;
+        left: 40px;
+        background-color: white;
+        padding: 5px 5px;
+        border-radius: 10px;
+        font-family: sans-serif;
+    }
+    .dealsPlace{
+        position: absolute;
+        bottom: 10px;
+        left: 40px;
+        color: white;
+        font-weight: 900;
+        font-size: 15px;
+        padding: 0px 10px;
+        border-radius: 10px;
+        font-family: sans-serif;
+    }
+    .dealsPrice{
+        position: absolute;
+        bottom: 10px;
+        right: 1px;
+        color: white;
+        font-weight: 700;
+        font-size: 12px;
+        padding: 0px 10px;
+        border-radius: 10px;
+        font-family: sans-serif;
+        text-align: right;
+    }
+    
+    .dealsAccomodation{
+        position: absolute;
+        top: 40px;
+        right: 1px;
+        color: #c62525;
+        -webkit-text-stroke: thin white;
+        font-weight: 1000;
+        font-size: 25px;
+        padding: 0px 0px;
+        border-radius: 10px;
+        font-family: sans-serif;
+        text-align: right;
+        letter-spacing: -1px;
+    }
+    
+    .dealsdays{
+        position: absolute;
+        top: 130px;
+        left: 40px;
+        color: #2ee54c;
+        -webkit-text-stroke: 1px white;
+        font-weight: 900;
+        font-size: 25px;
+        padding: 0px 0px;
+        border-radius: 10px;
+        font-family: sans-serif;
+        text-align: left;
+        letter-spacing: -1px;
+    }
+
+    /* Article Eight */
+    .articleEight p{
+        font-size: 15px;
+    }
+    .stories-list{
+        min-width: 99%;
+        height: 400px;
+    }
+    .stories-list p{
+        font-size: 13px;
+    }
+    .stories-list button{
+        margin: 35px 0 0 10px;
+    }
+
+    /* Article Nine */
+.articleNine h1{
+    font-size: 30px;
+    font-weight: 700;
+}
+.airline-companys{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 40px;
+}
+.airline-companys img{
+    width: 30%;
+    height: 70px;
+}
+
+/* footer */
+.download-app{
+    width: 100%;
+    height: auto;
+    background-color: #f9d7ca;
+    height: 480px;
+    display: flex;
+}
+.download-app .left-img{
+    display: none;
+}
+.download-app .right-content{
+    width: 100%;
+    text-align: center;
+    font-family: sans-serif;
+}
+.right-content h1{
+    font-size: 40px;
+    margin-top: 20px;
+    color: #0D086F;
+}
+.right-content h3{
+    font-size: 25px;
+    color: #333;
+    padding-top: 10px;
+}
+.right-content h2{
+    font-size: 30px;
+    padding-top: 20px;
+}
+.right-content button{
+    background: black;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+.download-btn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+}
+.right-content button{
+    width: 57%;
+    height: 60px;
+    text-align: center;
+    font-size: 15px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+.right-content button .btn-logos{
+    display: flex;
+    gap: 10px;
+}
+.right-content button img{
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+}
+
+.contactus{
+    width: 100%;
+    height: auto;
+    background: linear-gradient(90deg, rgba(27,91,217,1) 15%, rgba(255,255,255,1) 100%);
+    display: flex;
+    flex-wrap: wrap;
+}
+.contact-first{
+    width:40%;
+}
+.first-content{
+    display: flex;
+    margin-top: -20px;
+}
+.contact-first img{
+    width: 150px;
+}
+.tours{
+    width: 50%;
+    color: white;
+    text-align: right;
+    font-size: 15px;
+    padding-top: 6px;
+    padding-left: 3px;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+.ampersand{
+    width: 40%;
+    font-size: 30px;
+    padding-left: 5px;
+    padding-top: 7px;
+    padding-bottom: 20px;
+    font-weight: 600;
+    color: #6ef777;
+    font-family: sans-serif;
+}
+
+.contact-second{
+    width: 60%;
+    color: black;
+    font-family: sans-serif;
+    margin-top: 20px;
+    margin-left: 0px;
+    text-align: center;
+    
+}
+.contact-second h6{
+    font-size: 20px;
+}
+.contact-second ul{
+    list-style: none;
+    padding-top: 20px;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.contact-third{
+    width: 50%;
+    color:black;
+    font-family: sans-serif;
+    margin-top: 40px;
+    margin-left: 10px;
+}
+.contact-third h6{
+    font-size: 20px;
+}
+.contact-third ul{
+    list-style: none;
+    padding-top: 20px;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.contact-four{
+    width: 33%;
+    color:white;
+    font-family: sans-serif;
+    margin-top: 40px;
+    padding-left: 20px;
+}
+.contact-four h6{
+    font-size: 15px;
+    color: black;
+}
+.contact-four ul{   
+    list-style: none;
+    padding-top: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.contact-four ul a li img{
+    width: 30px;
+}
+
+}
+
+/*Responsive Design Tablet */
+
+@media (min-width:601px) and (max-width:990px) {
+    .ticket-method{
+        width: 90%;
+        height: 300px;
+    }
+    .flight{
+        width: 28%;
+        height: 100px;
+        top: 310px;
+        left: 30px;
+        gap:10px;
+    }
+    .flighticon{
+        width: 50px;
+        height: 60px;
+        margin-top: -15px;
+        margin-left: -30px;
+    }
+    .flight-title{
+        font-size: 28px;
+        font-family: "Montserrat", sans-serif;
+        margin-top: -20px;
+        padding: 15px 15px 15px 0px;
+    }
+    
+    /* Trip Selection in Banner */
+    .ticket-method{
+        width: 91%;
+        border: none;
+        height: 250px;
+        position: absolute;
+        top:380px;
+        left: 30px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 1px 1px 1px .5px;
+    }
+    .radiobtn{   
+        display: flex;
+        gap: 20px;
+    }
+    .radiobtn label{
+        font-size: 30px;
+    }
+   
+    /* one way */
+    #fromTO{
+        margin-left: 25px;
+    }
+    #departDate{
+        margin-left: 0px;
+    }
+
+      /* TwoWay */
+    #twoway{
+        margin-left: 30px;
+        margin-top: 20px;
+        display: none;
+    }
+    #twotripFrom{
+        width: 25%;
+        height: 50px;
+        padding-left: 20px;
+        font-size: 25px;
+        border-radius: 8px;
+    }
+    #twowayFrom::placeholder{
+        font-size: 25px;
+    }
+    #tripTo{
+        width: 25%;
+        height: 50px;
+    }
+    .exchangebtn{
+        width: 40px;
+        position: relative;
+        top: 8px;
+    }
+    #twowayDepart,#twowayReturn{
+        appearance: none ;
+        width: 15%;
+        height: 50px;
+    }
+    #direct{
+        font-size: 25px;
+        font-family: sans-serif;
+       
+    }
+    #twosubmitBtn{
+        margin-bottom: 20px;
+    }
+    
+    
+      /* Multiway */
+      
+      .flight-row input[type="text"]{
+        margin-left: 15px;
+      }
+    
+      #multiway .exchangebtn{
+        margin-left: 10px;
+      }
+
+      #multiway #directFlight{
+        margin-left: 25px;
+      }
+      .flight-options {
+        display: flex;
+        align-items: center;
+        margin-top: 0px;
+        margin-bottom: 30px;
+      }
+
+    .listcity{
+        font-size: 20px;
+    }
+    .listTocity{
+        font-size: 20px;
+    }
+    
+    
+    /* Article2 */
+    .articleTwo{
+        margin-top: 140px;
+        display: flex;
+        gap: 30px;
+        overflow-x: auto;
+    }
+    .customerspt{
+        min-width: 50%;
+    }
+    
+    /* articleThree */
+    .articleThree .planning{
+        margin-top: 20px;
+        font-size: 40px;
+
+    }
+    
+    .business-travel-container {
+        height: 300px;
+      
+      }
+      .business-travel-container .business-left-content{
+        width: 60%;
+      }
+      .business-travel-container .business-left-content h2 {
+        font-size: 24px;
+        padding-right: 0px;
+        margin-bottom: 15px;
+        
+      }
+    
+      .business-travel-container .business-left-content button {
+        background-color: #6ef777;
+        margin-left: 0px;
+        margin-top: 20px;
+        color: #0D086F;
+        font-weight: 700;
+        font-size: 20px;
+        padding: 15px 50px;
+        border: none;
+        border-radius: 15px;
+        cursor: pointer;
+      }
+      .business-travel-container .business-man img{
+        width: 95%;
+        height: 100%;
+        border-radius: 5%;
+      }
+      .tourPackage>.packages>.roundtripPlace{
+        position: absolute;
+        bottom: 15px;
+        left: 35px;
+        font-weight: 900;
+        font-size: 20px;
+    }
+      .tourPackage>.packages>.roundtripPrice{
+        position: absolute;
+        bottom: 15px;
+        right: -10px;
+        font-weight: 900;
+        font-size: 12px;
+    }
+
+        /* Article Five */
+    .servicesCartitems{
+        min-width: 40%;
+        height: 450px;
+        background-color: white;
+        border-radius: 2%;
+        margin-bottom: 30px;
+    }
+    .serviceImg img{
+        width: 100%;
+    }
+    .servicesCartitems h3{
+        text-align: center;
+        font-family: sans-serif;
+        padding-top: 35px;
+        font-size: 30px;
+    }
+    .articleFive .ourservice h1{
+        margin-top: 10px;
+        font-weight: 800;
+        font-size: 50px;
+        text-align: center;
+        color: #0D086F;
+        font-family: sans-serif;
+    }
+    .articleSixContent h5{
+        font-size: 40px;
+        color:white;
+        font-weight: 500;
+        padding: 30px 0px;
+    }
+    .articleSixContent h1{
+        font-size: 60px;
+        color:#c62525;
+    }
+    .dealsEco{
+        position: absolute;
+        top: 10px;
+        left: 40px;
+        background-color: white;
+        padding: 5px 5px;
+        border-radius: 10px;
+        font-family: sans-serif;
+    }
+    .dealsPlace{
+        position: absolute;
+        bottom: 10px;
+        left: 30px;
+        color: white;
+        font-weight: 900;
+        font-size: 16px;
+        padding: 0px 10px;
+        border-radius: 10px;
+        font-family: sans-serif;
+    }
+    .dealsPrice{
+        position: absolute;
+        bottom: 10px;
+        right: 0px;
+        color: white;
+        font-weight: 700;
+        font-size: 15px;
+        padding: 0px 5px;
+        border-radius: 10px;
+        font-family: sans-serif;
+        text-align: right;
+    }
+    
+    .dealsAccomodation{
+        position: absolute;
+        top: 40px;
+        right: 1px;
+        color: #c62525;
+        -webkit-text-stroke: thin white;
+        font-weight: 1000;
+        font-size: 25px;
+        padding: 0px 0px;
+        border-radius: 10px;
+        font-family: sans-serif;
+        text-align: right;
+        letter-spacing: -1px;
+    }
+    
+    .dealsdays{
+        position: absolute;
+        top: 150px;
+        left: 40px;
+        color: #2ee54c;
+        -webkit-text-stroke: 1.8px white;
+        font-weight: 900;
+        font-size: 25px;
+        padding: 0px 0px;
+        border-radius: 10px;
+        font-family: sans-serif;
+        text-align: left;
+        letter-spacing: -1px;
+    }
+
+    /* Article Eight */
+
+    .articleEight p{
+        font-size: 30px;
+    }
+    .stories-list{
+        min-width: 48%;
+        height: 400px;
+    }
+    .stories-list img{
+        width: 100%;
+        height: 275px;
+    }
+    .stories-content{
+        border-radius:20px 20px 9px 9px ;
+    }
+    .stories-list p{
+        font-size: 16px;
+    }
+    .stories-list button{
+        margin: 25px 0 0 10px;
+    }
+
+    /* Article Nine */
+    .articleNine h1{
+        font-size: 30px;
+        font-weight: 700;
+    }
+    .airline-companys{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        margin-bottom: 40px;
+    }
+    .airline-companys img{
+        width: 30%;
+        height: 70px;
+    }
+
+    /* Footer */
+    .download-app .right-content{
+        width: 60%;
+        text-align: center;
+        font-family: sans-serif;
+    }
+    .right-content h1{
+        margin-top: 120px;
+        font-size: 40px;
+    }
+    .right-content h3{
+        font-size: 25px;
+    }
+    .right-content h2{
+        font-size: 30px;
+    }
+    .right-content button{
+        background: black;
+        color: white;
+        padding: 10px;
+        border-radius: 10px;
+    }
+    .download-btn{
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+    }
+    .right-content button{
+        width: 38%;
+        height: 60px;
+        text-align: center;
+        font-size: 13px;
+        margin-top: 30px;
+        cursor: pointer;
+    }
+    .right-content button .btn-logos{
+        display: flex;
+        gap: 10px;
+    }
+    .right-content button img{
+        width: 30px;
+        height: 30px;
+        margin-left: 5px;
+    }
+
+    .contactus{
+        width: 100%;
+        height: auto;
+        background: linear-gradient(90deg, rgba(27,91,217,1) 15%, rgba(255,255,255,1) 100%);
+        display: flex;
+    }
+    .contact-first{
+        width: 30%;
+    }
+    .first-content{
+        display: flex;
+        margin-top: -30px;
+    }
+    .contact-first img{
+        width: 80%;
+    }
+    .tours{
+        width: 50%;
+        color: white;
+        text-align: right;
+        font-size: 35px;
+        padding-top: 6px;
+        font-weight: 600;
+        font-family: sans-serif;
+    }
+    .ampersand{
+        width: 40%;
+        font-size: 80px;
+        padding-left: 5px;
+        padding-top: 3px;
+        padding-bottom: 20px;
+        font-weight: 600;
+        color: #6ef777;
+        font-family: sans-serif;
+    }
+    
+    .contact-second{
+        width: 20%;
+        color: white;
+        font-family: sans-serif;
+        margin-top: 40px;
+    }
+    .contact-second h6{
+        font-size: 20px;
+    }
+    .contact-second ul{
+        list-style: none;
+        padding-top: 20px;
+        font-size: 15px;
+        font-weight: 700;
+    }
+    
+    .contact-third{
+        width: 20%;
+        color:white;
+        font-family: sans-serif;
+        margin-top: 40px;
+    }
+    .contact-third h6{
+        font-size: 20px;
+    }
+    .contact-third ul{
+        list-style: none;
+        padding-top: 20px;
+        font-size: 15px;
+        font-weight: 700;
+    }
+    
+    .contact-four{
+        width: 20%;
+        color:white;
+        font-family: sans-serif;
+        margin-top: 40px;
+        margin-left: 40px;
+    }
+    .contact-four h6{
+        font-size: 20px;
+    }
+    .contact-four ul{
+        list-style: none;
+        padding-top: 20px;
+        font-size: 20px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+    }
+    .contact-four ul a li img{
+        width: 40px;
+    }
+    
+   
+}

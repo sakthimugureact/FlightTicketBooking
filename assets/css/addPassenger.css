@@ -1,0 +1,976 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.navbar {
+    position: fixed;
+    width: 100%;
+    background:white;
+    display: flex;
+    top:0;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid black;
+    z-index: 99;
+}
+
+.logo img {
+    height: 55px;
+    margin-left: -10px;
+    margin-top: 5px;
+}
+
+.nav-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.nav-buttons a, .nav-buttons button {
+    background-color: #134DC0;
+    color: white;
+    padding: 5px 18px;
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+    margin-left: 40px;
+    margin-top: 0px;
+    cursor: pointer;
+}
+
+.nav-buttons button {
+    display: flex;
+    align-items: center;
+}
+
+.nav-buttons .country{
+    padding: 5.34px 15px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.nav-buttons img {
+    width: 18px;
+    height: 13px;
+    margin-right: 5px;
+}
+
+.nav-buttons select {
+    background-color: #134DC0;
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 10px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    margin-left: 1px;
+    cursor: pointer;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger .bar {
+    height: 3px;
+    width: 25px;
+    background-color: #333;
+    margin: 3px 0;
+    border-radius: 2px;
+}
+
+.banner{
+    width: 100%;
+    height: 500px;
+    position: relative;
+}
+
+.banner img{
+    width: 100%;
+    height: 100%;
+    margin-top: 50px;
+    filter: brightness(130%);
+}
+
+/* SignUP */
+.signup{
+    background-color: #134DC0;
+    width: 80%;
+    height: 300px;
+    margin: auto;
+    margin-top: 130px;
+}
+
+.flight-details{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    font-family: sans-serif;
+    margin-top: 50px;   
+    position: absolute;
+    top:30px;
+    left: 30px;
+    background-color: white;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.605);
+}
+
+.airlineInfo{
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+}
+
+.flight-class{
+    width: 40%;
+    font-size: 30px;
+    font-weight: 600;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.flight-class p {
+    padding: 0px 30px;
+}
+
+.flight-number{
+    width: 40%;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.flight-image{
+    width: 20%;
+    width: 300px;
+}
+
+.flight-info{
+    width: 100%;
+    display: flex;
+}
+.flightinfoleft{
+    width: 60%;
+}
+
+.route-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+    justify-content: center;
+  }
+  .fromdiv{
+    display: flex;
+    color: #134DC0;
+  }
+  
+  .departure-div{
+    line-height: 1.5;
+    width: 300px;
+    text-align: center;
+    font-size: 15px;
+    float: left;
+  }
+  .arrival-div {
+
+    text-align: center;
+    line-height: 1.5;
+    width: 300px;
+    font-size: 15px;
+    float: right;
+    margin-left: 70px;
+
+  }
+  
+  .route-line-div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    justify-content: center;
+    gap:5px
+  }
+  
+  .lines {
+    width: 200px; /* Adjust as needed */
+    height: 2px;
+    background-color: black;
+    
+  }
+  
+  .dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+  }
+  
+  .dot.lefted {
+    background-color: darkgreen;
+    
+  }
+  
+  .dot.righted {
+    background-color: lightgreen;
+  }
+  
+  .duration-text {
+    margin: 0 10px;
+    text-align: center;
+    font-size: 30px;
+    margin-top:20px;
+    position: relative;
+    top: 30px;
+    color: #4d4545;
+    font-weight: 600;
+  }
+  
+  .direct-text {
+    margin-top: -10px;
+    text-align: center;
+    font-size: 30px;
+    color: #4d4545;
+    font-weight: 600;
+  }
+  .fromdate{
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  
+  .baggage-div {
+    display: grid;
+    grid-template-columns:repeat(3,1fr);
+    margin-left: 70px;
+  }
+  
+  .baggage-div > div {
+    padding: 15px;
+    text-align: center;
+    font-size: 20px;
+  }
+  
+  .baggage-div > div:nth-child(-n+4) {
+    font-weight: bold;
+  }
+
+/* Footer */
+
+.contactus{
+    width: 100%;
+    height: auto;
+    background: linear-gradient(90deg, rgba(27,91,217,1) 15%, rgba(255,255,255,1) 100%);
+    display: flex;
+    margin-top: 20px;
+}
+.contact-first{
+    width: 30%;
+}
+.first-content{
+    display: flex;
+    margin-top: -70px;
+}
+.tours{
+    width: 50%;
+    color: white;
+    text-align: right;
+    font-size: 45px;
+    padding-top: 6px;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+.ampersand{
+    width: 40%;
+    font-size: 100px;
+    padding-left: 5px;
+    padding-top: 3px;
+    padding-bottom: 20px;
+    font-weight: 600;
+    color: #6ef777;
+    font-family: sans-serif;
+}
+
+.contact-second{
+    width: 20%;
+    color: white;
+    font-family: sans-serif;
+    margin-top: 70px;
+}
+.contact-second h6{
+    font-size: 30px;
+}
+.contact-second ul{
+    list-style: none;
+    padding-top: 20px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.contact-third{
+    width: 20%;
+    color:white;
+    font-family: sans-serif;
+    margin-top: 70px;
+}
+.contact-third h6{
+    font-size: 30px;
+}
+.contact-third ul{
+    list-style: none;
+    padding-top: 20px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.contact-four{
+    width: 20%;
+    color:white;
+    font-family: sans-serif;
+    margin-top: 70px;
+    margin-left: 40px;
+}
+.contact-four h6{
+    font-size: 30px;
+}
+.contact-four ul{
+    list-style: none;
+    padding-top: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+.contact-four ul a li img{
+    width: 50px;
+}
+
+/* FirstContainer */
+.first-container{
+    background-color: #134DC0;
+    width: 100%;
+    height: 350px;
+    border-radius: 10px;
+}
+
+.traveller-details {
+    width: 95%; 
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 40px;
+    font-family: sans-serif;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    margin-top: 150px;
+  }
+  
+  .traveller-details h2 {
+    margin-bottom: 20px;
+    font-size: 2.2em;
+  }
+  
+  .traveller-details div {
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    display: flex; 
+    align-items: center; 
+    height: 80px;
+    font-size: 30px;
+    font-weight: 700;
+    color: #a9a8a8;
+  }
+  
+  .traveller-details div span {
+    flex-grow: 1;
+  }
+  .traveller-details div:hover {
+    background-color: #e0e0e0;
+  }
+
+  .seatmeals{
+    width: 95%; 
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 30px;
+    font-family: sans-serif;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    margin-top: 20px;
+    font-size: 25px;
+  }
+
+  .addons{
+    width: 95%; 
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 30px;
+    font-family: sans-serif;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    margin-top: 20px;
+    font-size: 25px;
+  }
+  .terms input{
+    width: 30px;
+    height: 30px;
+    margin-top: 20px;
+  }
+    .terms label{
+    font-size: 40px;
+    font-weight: 600;
+    font-family: sans-serif;
+    margin-left: 30px;
+    }
+    .terms button{
+        width: 22%;
+        margin-left: 30px;
+        margin-top: 10px;
+        border: none;
+        background-color: #1aae33;
+        font-size: 30px;
+        color: white;
+        border-radius: 10px;
+        padding: 20px;
+    }
+@media (max-width:600px) {
+    
+.hamburger {
+    display: flex;
+}
+
+.nav-buttons {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Adjust based on navbar height */
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-buttons.active {
+    display: flex;
+}
+
+.nav-buttons a, .nav-buttons button, .nav-buttons select {
+    margin: 10px 20px;
+}
+
+/* Footer */
+.contactus{
+    width: 100%;
+    height: auto;
+    background: linear-gradient(90deg, rgba(27,91,217,1) 15%, rgba(255,255,255,1) 100%);
+    display: flex;
+    flex-wrap: wrap;
+}
+.contact-first{
+    width:40%;
+}
+.first-content{
+    display: flex;
+    margin-top: -20px;
+}
+.contact-first img{
+    width: 150px;
+}
+.tours{
+    width: 50%;
+    color: white;
+    text-align: right;
+    font-size: 15px;
+    padding-top: 6px;
+    padding-left: 3px;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+.ampersand{
+    width: 40%;
+    font-size: 30px;
+    padding-left: 5px;
+    padding-top: 7px;
+    padding-bottom: 20px;
+    font-weight: 600;
+    color: #6ef777;
+    font-family: sans-serif;
+}
+
+.contact-second{
+    width: 60%;
+    color: black;
+    font-family: sans-serif;
+    margin-top: 20px;
+    margin-left: 0px;
+    text-align: center;
+    
+}
+.contact-second h6{
+    font-size: 20px;
+}
+.contact-second ul{
+    list-style: none;
+    padding-top: 20px;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.contact-third{
+    width: 50%;
+    color:black;
+    font-family: sans-serif;
+    margin-top: 40px;
+    margin-left: 10px;
+}
+.contact-third h6{
+    font-size: 20px;
+}
+.contact-third ul{
+    list-style: none;
+    padding-top: 20px;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.contact-four{
+    width: 33%;
+    color:white;
+    font-family: sans-serif;
+    margin-top: 40px;
+    padding-left: 20px;
+}
+.contact-four h6{
+    font-size: 15px;
+    color: black;
+}
+.contact-four ul{   
+    list-style: none;
+    padding-top: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.contact-four ul a li img{
+    width: 30px;
+}
+
+
+.flight-details{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    font-family: sans-serif;
+    margin-top: 50px;   
+    position: absolute;
+    top:30px;
+    left: 10px;
+    background-color: white;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.605);
+}
+
+.airlineInfo{
+    display: flex;
+   flex-direction: column;
+    width: 100%;
+
+}
+
+.flight-class{
+    width: 100%;
+    font-size: 25px;
+    font-weight: 600;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.flight-class p {
+    padding: 0px 30px;
+}
+
+.flight-number{
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: -20px;
+    margin-bottom: 10px;
+}
+
+.flight-image{
+    width: 100%;
+    height: 100px;
+}
+.flight-image img{
+    width: 100%;
+}
+
+.flight-info{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.flightinfoleft{
+    width: 60%;
+}
+
+.route-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+    justify-content: center;
+  }
+  .fromdiv{
+    display: flex;
+    color: #134DC0;
+  }
+  
+  .departure-div{
+    line-height: 1.5;
+    width: 300px;
+    text-align: center;
+    font-size: 8px;
+    float: left;
+  }
+  .arrival-div {
+
+    text-align: center;
+    line-height: 1.5;
+    width: 300px;
+    font-size: 8px;
+    float: right;
+    margin-left: 70px;
+
+  }
+  
+  .route-line-div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    justify-content: center;
+    gap:5px
+  }
+  
+  .lines {
+    width: 100px; /* Adjust as needed */
+    height: 2px;
+    background-color: black;
+    
+  }
+  
+  .dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+  }
+  
+  .dot.lefted {
+    background-color: darkgreen;
+    
+  }
+  
+  .dot.righted {
+    background-color: lightgreen;
+  }
+  
+  .duration-text {
+    margin: 0 10px;
+    text-align: center;
+    font-size: 30px;
+    margin-top:20px;
+    position: relative;
+    top: 30px;
+    color: #4d4545;
+    font-weight: 600;
+  }
+  
+  .direct-text {
+    margin-top: -10px;
+    text-align: center;
+    font-size: 15px;
+    color: #4d4545;
+    font-weight: 600;
+  }
+  .fromdate{
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+    font-size: 11px;
+    font-weight: bold;
+  }
+  
+  .baggage-div {
+    display: grid;
+    grid-template-columns:repeat(3,1fr);
+    margin-left: 0px;
+  }
+  
+  .baggage-div > div {
+    padding: 15px;
+    text-align: center;
+    font-size: 10px;
+  }
+  
+  .traveller-details {
+    margin-top:250px;
+  }
+  
+  .traveller-details h2 {
+    font-size: 1.2em;
+  }
+  
+  .traveller-details div {
+  
+    font-size: 20px;
+ 
+  }
+
+
+  .seatmeals{
+    font-size: 15px;
+  }
+
+  .addons{
+    font-size: 15px;
+  }
+  .terms input{
+    width: 15px;
+    height: 15px;
+    margin-top: 20px;
+  }
+    .terms label{
+    font-size: 15px;
+    font-weight: 600;
+    font-family: sans-serif;
+    margin-left: 10px;
+    
+    }
+    .terms button{
+        width: 80%;
+        margin-left: 30px;
+        margin-top: 10px;
+        border: none;
+        background-color: #1aae33;
+        font-size: 30px;
+        color: white;
+        border-radius: 10px;
+        padding: 20px;
+    }
+}
+
+@media (min-width:601px) and (max-width:990px){
+    /* Footer */
+    .contactus{
+        width: 100%;
+        height: auto;
+        background: linear-gradient(90deg, rgba(27,91,217,1) 15%, rgba(255,255,255,1) 100%);
+        display: flex;
+    }
+    .contact-first{
+        width: 30%;
+    }
+    .first-content{
+        display: flex;
+        margin-top: -30px;
+    }
+    .contact-first img{
+        width: 80%;
+    }
+    .tours{
+        width: 50%;
+        color: white;
+        text-align: right;
+        font-size: 35px;
+        padding-top: 6px;
+        font-weight: 600;
+        font-family: sans-serif;
+    }
+    .ampersand{
+        width: 40%;
+        font-size: 80px;
+        padding-left: 5px;
+        padding-top: 3px;
+        padding-bottom: 20px;
+        font-weight: 600;
+        color: #6ef777;
+        font-family: sans-serif;
+    }
+    
+    .contact-second{
+        width: 20%;
+        color: white;
+        font-family: sans-serif;
+        margin-top: 40px;
+    }
+    .contact-second h6{
+        font-size: 20px;
+    }
+    .contact-second ul{
+        list-style: none;
+        padding-top: 20px;
+        font-size: 15px;
+        font-weight: 700;
+    }
+    
+    .contact-third{
+        width: 20%;
+        color:white;
+        font-family: sans-serif;
+        margin-top: 40px;
+    }
+    .contact-third h6{
+        font-size: 20px;
+    }
+    .contact-third ul{
+        list-style: none;
+        padding-top: 20px;
+        font-size: 15px;
+        font-weight: 700;
+    }
+    
+    .contact-four{
+        width: 20%;
+        color:white;
+        font-family: sans-serif;
+        margin-top: 40px;
+        margin-left: 40px;
+    }
+    .contact-four h6{
+        font-size: 20px;
+    }
+    .contact-four ul{
+        list-style: none;
+        padding-top: 20px;
+        font-size: 20px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+    }
+    .contact-four ul a li img{
+        width: 40px;
+    }
+
+    .flight-details{
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 20px;
+        font-family: sans-serif;
+        margin-top: 50px;   
+        position: absolute;
+        top:30px;
+        left: 20px;
+        background-color: white;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.605);
+    }
+    
+    .airlineInfo{
+        display: flex;
+        align-items: center;
+        width: 100%;
+    
+    }
+    
+    .flight-class{
+        width: 50%;
+        font-size: 30px;
+        font-weight: 600;
+        border: 1px solid black;
+        padding: 10px;
+        border-radius: 15px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .flight-class p {
+        padding: 0px 30px;
+    }
+    
+    .flight-number{
+        width: 40%;
+        font-size: 22px;
+        font-weight: 600;
+    }
+    
+    .flight-image{
+        width: 20%;
+        width: 300px;
+    }
+    
+    .flight-info{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .flight-class{
+        font-size: 20px;
+    }
+    .baggage-div{
+        margin-left: 10px;
+    }
+    .fromdate{
+        font-size: 20px;
+    }
+    .arrival-div,.departure-div{
+        font-size: 10px;
+    }
+    
+   
+
+    .traveller-details {
+        width: 95%; 
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 40px;
+        font-family: sans-serif;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin: auto;
+        margin-top: 300px;
+      }
+      
+
+        .terms label{
+        font-size: 30px;
+        font-weight: 600;
+        font-family: sans-serif;
+        margin-left: 30px;
+        }
+        .terms button{
+            width: 22%;
+            margin-left: 30px;
+            margin-top: 10px;
+            border: none;
+            background-color: #1aae33;
+            font-size: 30px;
+            color: white;
+            border-radius: 10px;
+            padding: 20px;
+        }
+}
