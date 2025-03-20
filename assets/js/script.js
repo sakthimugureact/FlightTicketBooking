@@ -132,7 +132,7 @@ let city = [];
 let flightobj = [];
 // Get city names from Api
 function JsonData() {
-    const url = "../assets/js/airports.json"
+    const url = "./assets/js/airports.json"
     fetch(url)
         .then(response => response.json())
         .then(data => data.map((val) => {
