@@ -403,6 +403,20 @@
         display: flex;
         justify-content: space-between;
     }
+    .paybtn{
+        width: 40%;
+        height: 40px;
+        font-size: 25px;
+        border: none;
+        outline: none;
+        background-color: #134DC0;
+        color: white;
+        font-weight: 600;
+        border-radius: 10px;
+        position: absolute;
+        right: 20px;
+        bottom: 5px;
+    }
     
 }
 
